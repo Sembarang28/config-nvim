@@ -26,7 +26,7 @@ It is a full IDE setup with a Catppuccin Mocha theme, LSP, DAP, linting, and for
 # back up any existing config
 mv ~/.config/nvim ~/.config/nvim.bak
 
-git clone <this-repo-url> ~/.config/nvim
+git clone https://github.com/Sembarang28/config-nvim.git ~/.config/nvim
 nvim
 ```
 
