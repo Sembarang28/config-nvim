@@ -9,6 +9,9 @@ body, .markdown-body {
 }
 .markdown-body { max-width: none !important; padding: 0 26px !important; box-sizing: border-box; }
 #page-ctn, .markdown-body { margin: 0 !important; }
+#page-ctn { max-width: none !important; width: 100% !important; }
+main, #__next { background: #1f1f1f !important; }
+#page-ctn > *, #page-ctn .markdown-body { margin-left: 0 !important; margin-right: 0 !important; }
 h1, h2, h3, h4, h5, h6 { font-weight: 600 !important; margin-top: 24px !important; margin-bottom: 16px !important; line-height: 1.25 !important; color: #cccccc !important; }
 h1 { font-size: 2em !important; margin-top: 0 !important; padding-bottom: .3em !important; border-bottom: 1px solid rgba(255,255,255,.18) !important; }
 h2 { font-size: 1.5em !important; padding-bottom: .3em !important; border-bottom: 1px solid rgba(255,255,255,.18) !important; }
