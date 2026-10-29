@@ -1,0 +1,41 @@
+/* VS Code "Dark Modern" markdown preview look */
+body, .markdown-body {
+  background: #1f1f1f !important;
+  color: #cccccc !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  word-wrap: break-word;
+}
+.markdown-body { max-width: none !important; padding: 0 26px !important; box-sizing: border-box; }
+#page-ctn, .markdown-body { margin: 0 !important; }
+h1, h2, h3, h4, h5, h6 { font-weight: 600 !important; margin-top: 24px !important; margin-bottom: 16px !important; line-height: 1.25 !important; color: #cccccc !important; }
+h1 { font-size: 2em !important; margin-top: 0 !important; padding-bottom: .3em !important; border-bottom: 1px solid rgba(255,255,255,.18) !important; }
+h2 { font-size: 1.5em !important; padding-bottom: .3em !important; border-bottom: 1px solid rgba(255,255,255,.18) !important; }
+h3 { font-size: 1.25em !important; } h4 { font-size: 1em !important; }
+h5 { font-size: .875em !important; } h6 { font-size: .85em !important; }
+a { color: #4daafc !important; text-decoration: none !important; }
+a:hover { text-decoration: underline !important; }
+code {
+  font-family: "SF Mono", Menlo, Monaco, Consolas, "Courier New", monospace !important;
+  font-size: 1em !important; color: #d7ba7d !important;
+  background: rgba(10,10,10,.4) !important; padding: 1px 3px !important; border-radius: 4px !important;
+}
+pre, pre.hljs, .markdown-body pre {
+  background: rgba(10,10,10,.4) !important; border: 1px solid rgba(255,255,255,.1) !important;
+  border-radius: 3px !important; padding: 16px !important; line-height: 1.357 !important;
+}
+pre code { color: inherit !important; background: transparent !important; padding: 0 !important; }
+blockquote {
+  background: rgba(127,127,127,.1) !important; color: #cccccc !important;
+  border: none !important; border-left: 5px solid rgba(127,127,127,.4) !important;
+  margin: 0 7px 0 5px !important; padding: 0 16px 0 10px !important;
+}
+table { border-collapse: collapse !important; border: none !important; }
+th { text-align: left !important; border-bottom: 1px solid rgba(255,255,255,.69) !important; border-top: none !important; background: transparent !important; }
+th, td { padding: 5px 10px !important; border-left: none !important; border-right: none !important; }
+td { border-bottom: 1px solid rgba(255,255,255,.18) !important; border-top: none !important; }
+tr, tr:nth-child(2n) { background: transparent !important; border: none !important; }
+hr { border: 0 !important; height: 2px !important; border-bottom: 2px solid rgba(255,255,255,.18) !important; background: transparent !important; }
+img { max-width: 100%; max-height: 100%; }
+li { margin: 0 !important; } ul, ol { padding-left: 2em !important; }
