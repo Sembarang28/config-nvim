@@ -11,6 +11,20 @@ return {
     },
   },
 
+  -- git blame: inline author/date at end of the cursor line (toggle <leader>gB),
+  -- full commit popup with <leader>ghb (LazyVim default), whole-file blame with <leader>ghB
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      current_line_blame = true,
+      current_line_blame_opts = { delay = 300, virt_text_pos = "eol" },
+      current_line_blame_formatter = "   <author>, <author_time:%d %b %Y> - <summary>",
+    },
+    keys = {
+      { "<leader>gB", "<cmd>Gitsigns toggle_current_line_blame<cr>", desc = "Toggle Inline Git Blame" },
+    },
+  },
+
   -- rendered markdown view in the buffer (render-markdown.nvim + browser preview), toggle with <leader>um
   { import = "lazyvim.plugins.extras.lang.markdown" },
 
