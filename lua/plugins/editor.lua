@@ -25,6 +25,25 @@ return {
     },
   },
 
+  -- sticky scroll: pins the opening line of the enclosing block ({ of function / if / for / class)
+  -- at the top of the window while scrolling, so you always know which scope you're in
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = "LazyFile",
+    opts = {
+      enable = true,
+      max_lines = 4, -- cap how many header lines stick at once
+      min_window_height = 20, -- disable in tiny splits
+      multiline_threshold = 1, -- show a multi-line signature as a single line
+      trim_scope = "outer", -- drop the outermost scope when there are too many
+      mode = "cursor", -- scopes follow the cursor / top visible line
+      separator = "─", -- line under the sticky header
+    },
+    keys = {
+      { "<leader>ut", function() require("treesitter-context").toggle() end, desc = "Toggle Sticky Context" },
+    },
+  },
+
   -- rendered markdown view in the buffer (render-markdown.nvim + browser preview), toggle with <leader>um
   { import = "lazyvim.plugins.extras.lang.markdown" },
 
