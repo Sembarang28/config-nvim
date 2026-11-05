@@ -51,7 +51,8 @@ function M.run(name, mode)
   if mode == "resume" then
     vim.list_extend(cmd, tool.resume)
   end
-  local opts = { cwd = LazyVim.root() }
+  -- open as a right-side split like Claude, not a floating popup
+  local opts = { cwd = LazyVim.root(), win = { position = "right", width = 0.35 } }
 
   if mode == "focus" then
     return Snacks.terminal.focus(cmd, opts)
