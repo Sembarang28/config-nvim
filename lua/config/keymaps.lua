@@ -17,3 +17,6 @@ vim.keymap.set("n", "<M-Up>", "<cmd>resize +2<cr>", { desc = "Increase height" }
 vim.keymap.set("n", "<M-Down>", "<cmd>resize -2<cr>", { desc = "Decrease height" })
 vim.keymap.set("n", "<M-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease width" })
 vim.keymap.set("n", "<M-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase width" })
+
+-- Merge conflicts: :MergeListConflicts, :MergeAcceptCurrent[!], :MergeAcceptIncoming[!]
+require("config.merge").setup()
