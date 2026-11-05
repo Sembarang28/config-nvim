@@ -32,13 +32,25 @@ return {
     event = "LazyFile",
     opts = {
       enable = true,
-      max_lines = 4, -- cap how many header lines stick at once
-      min_window_height = 20, -- disable in tiny splits
-      multiline_threshold = 1, -- show a multi-line signature as a single line
+      max_lines = 5, -- cap how many header lines stick at once
+      min_window_height = 0, -- never disable, even in small windows
+      multiline_threshold = 20, -- keep multi-line headers (e.g. wrapped params) fully visible
       trim_scope = "outer", -- drop the outermost scope when there are too many
-      mode = "cursor", -- scopes follow the cursor / top visible line
+      mode = "topline", -- like VS Code: scopes of the top visible line, not the cursor
+      line_numbers = true,
       separator = "─", -- line under the sticky header
     },
+    config = function(_, opts)
+      require("treesitter-context").setup(opts)
+      -- make the sticky header clearly visible (default blends into the background)
+      local function hl()
+        vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#1f2335" })
+        vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { bg = "#1f2335", fg = "#7aa2f7" })
+        vim.api.nvim_set_hl(0, "TreesitterContextSeparator", { fg = "#7aa2f7" })
+      end
+      hl()
+      vim.api.nvim_create_autocmd("ColorScheme", { callback = hl })
+    end,
     keys = {
       { "<leader>ut", function() require("treesitter-context").toggle() end, desc = "Toggle Sticky Context" },
     },

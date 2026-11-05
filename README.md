@@ -33,6 +33,7 @@ Clone it, open `nvim`, and you get LSP, debugging, linting, formatting, Markdown
 | **Markdown** | Rendered in-buffer with `render-markdown.nvim`, plus browser preview |
 | **Database** | `.dbml` files render to an SVG schema diagram with one keystroke |
 | **Git** | Inline current-line blame, full commit popup, whole-file blame |
+| **Context** | Sticky header (treesitter-context) pins the enclosing function/block while scrolling |
 | **Search** | Live grep across the project, hidden files in the explorer |
 
 ---
@@ -109,6 +110,7 @@ Standard LazyVim defaults apply, plus the custom bindings below.
 | `<leader>ab` | Add current buffer to Claude |
 | `<leader>ay` / `<leader>ad` | Accept / deny Claude diff |
 | `<leader>gB` | Toggle inline git blame |
+| `<leader>ut` | Toggle sticky context |
 | `<leader>cp` / `Ctrl+Shift+V` | Markdown preview (in Markdown files) |
 | `<leader>cP` | Switch preview style (VS Code / GitHub) |
 | `<leader>cd` | Render DBML diagram (in DBML files) |
@@ -128,7 +130,7 @@ lua/config/autocmds.lua      DBML render, Markdown writing mode and preview
 lua/plugins/colorscheme.lua  Catppuccin Mocha, transparent background
 lua/config/ai.lua            AI CLI launchers (Claude, Codex, Antigravity, OpenCode)
 lua/plugins/ai.lua           claudecode.nvim and AI keymaps
-lua/plugins/editor.lua       explorer, git blame, Markdown rendering and preview
+lua/plugins/editor.lua       explorer, git blame, sticky context, Markdown rendering and preview
 lua/plugins/tools.lua        Mason packages, nvim-lint, conform.nvim
 assets/vscode-markdown.css   VS Code–style preview theme
 ```
